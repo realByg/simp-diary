@@ -1,0 +1,123 @@
+$borderColor: white
+$width: 120px
+
+body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "Microsoft YaHei", serif
+  overflow: hidden
+  font-size: 14px
+
+.content
+  text-align: center
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  z-index: 0
+  color: white
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  > div
+    width: 100%
+
+.header
+  margin: 0 auto
+  width: 100%
+
+.footer
+  margin: 0 auto
+  width: 100%
+
+.simp
+  width: $width
+  height: $width
+  margin: auto
+  border-radius: 1000px
+  border: 1px solid $borderColor
+  background-image: url("/assets/simp.jpg")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 0 10px 2px #929292
+  overflow: hidden
+
+.vLine
+  width: 1px
+  height: 50px
+  margin: auto
+  background-color: $borderColor
+
+.hLine
+  width: 80%
+  height: 1px
+  margin: auto
+  background-color: $borderColor
+
+.oneMore, .simpDiary
+  border: 1px solid $borderColor
+  height: 40px
+  width: $width
+  margin: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 5px
+  cursor: pointer
+
+.bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  z-index: -999
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("/assets/overlay.png"), url("/assets/bg.jpg")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  filter: blur(2px)
+
+.diaryContent
+  width: 70%
+  margin: auto
+  line-height: 1.5
+  letter-spacing: 2px
+
+
+  .title
+    font-size: 30px
+    font-weight: 700
+
+  .diary
+    font-size: 20px
+    font-weight: 600
+
+@media (max-width: 900px)
+  body
+    font-size: 10px
+
+  .diaryContent
+    width: 80%
+
+    .title
+      font-size: 16px
+
+    .diary
+      font-size: 13px
+
+  .vLine
+    height: 20px
+
+  .oneMore, .simpDiary
+    width: 80px
+    height: 30px
+
+  .simp
+    width: 70px
+    height: 70px

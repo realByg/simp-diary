@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Diary from './components/Diary'
+import './style.sass'
+import Anime from 'react-anime'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default function App() {
+
+    useEffect(() => {
+        document.title = '舔狗日记'
+    }, [])
+
+    return (
+        <>
+            <div className="content">
+                <Anime
+                    delay={100}
+                    translateY={-20}
+                    duration={2000}
+                >
+                    <Header/>
+                </Anime>
+
+                <Anime
+                    delay={100}
+                    scale={[0, 1]}
+                    duration={1500}
+                >
+                    <Diary/>
+                </Anime>
+
+                <Anime
+                    delay={100}
+                    translateY={20}
+                    duration={2000}
+                >
+                    <Footer/>
+                </Anime>
+            </div>
+            <div className="bg"/>
+        </>
+    )
 }
 
-export default App;
+
