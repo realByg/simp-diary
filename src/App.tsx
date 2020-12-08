@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Diary from './components/Diary'
+import Credit from './components/Credit'
 import './style.sass'
 import Anime from 'react-anime'
 
@@ -38,6 +39,8 @@ export default function App() {
                 >
                     <Footer/>
                 </Anime>
+
+                <Credit/>
             </div>
             <div className="bg"/>
         </>
