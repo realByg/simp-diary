@@ -1,1 +1,1 @@
-simp-diary
+https://zayabighead.github.io/simp-diary/
