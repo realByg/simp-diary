@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {diaries} from '../data/diaries'
 import {weathers} from '../data/weathers'
 
-
 export default function Diary() {
     const [date, setDate] = useState('2020-09-02')
     const [weather, setWeather] = useState('晴')

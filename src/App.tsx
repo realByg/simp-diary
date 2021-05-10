@@ -3,18 +3,15 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Diary from './components/Diary'
 import Credit from './components/Credit'
-import './style.sass'
 import Anime from 'react-anime'
 
-
 export default function App() {
-
     useEffect(() => {
         document.title = '舔狗日记'
     }, [])
 
     return (
-        <>
+        <div>
             <div className="content">
                 <Anime
                     delay={100}
@@ -43,7 +40,7 @@ export default function App() {
                 <Credit/>
             </div>
             <div className="bg"/>
-        </>
+        </div>
     )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export default function Footer() {
     return (
         <div className="footer">
@@ -8,10 +7,7 @@ export default function Footer() {
             <div className="vLine"/>
             <div
                 className="oneMore"
-                onClick={() => {
-                    // eslint-disable-next-line no-restricted-globals
-                    location.reload()
-                }}
+                onClick={() => window.location.reload()}
             >
                 再来一段
             </div>
